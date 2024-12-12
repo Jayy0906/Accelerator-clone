@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to right, #f9f9f9, #ffffff);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .logos img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .services-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .services-section img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .services-content {
+            max-width: 500px;
+            padding-left: 20px;
+        }
+
+        .services-content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .services-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .services-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .services-list li {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .services-list li::before {
+            content: "\2713";
+            color: #6c63ff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .new-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .new-section img {
+            max-width: 400px;
+            border-radius: 10px;
+        }
+
+        .new-content {
+            max-width: 500px;
+        }
+
+        .new-content h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .new-content p {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .new-content a {
+            border: 2px solid #000;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .new-content a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .recent-projects {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .recent-projects h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .project-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .project-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .project-item h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .view-projects {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .view-projects a {
+            border: 2px solid #6c63ff;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            color: #6c63ff;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .view-projects a:hover {
+            background-color: #6c63ff;
+            color: #fff;
+        }
+
+        .faq-section {
+            padding: 40px 20px;
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .faq-section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .faq-item {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin: 0;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /***** Consultation Section *****/
+        .consultation-section {
+            background-color: #6c63ff;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .consultation-section h2 {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .consultation-section p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #f9f9f9;
+        }
+
+        .btn-consultation {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #6c63ff;
+            background-color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn-consultation:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Footer Section */
+        .footer {
+            background-color: #fff;
+            color: #000;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: #6c63ff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            font-size: 1rem;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Accelerator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                            <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                            <li><a class="dropdown-item" href="#">About Us</a></li>
+                            <li><a class="dropdown-item" href="#">Contact</a></li>
+                            <li><a class="dropdown-item" href="#">FAQs</a></li>
+                            <li><a class="dropdown-item" href="#">Landing Page</a></li>
+                            <li><a class="dropdown-item" href="#">Thank You</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="blogDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Blog Templates
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="blogDropdown">
+                            <li><a class="dropdown-item" href="#">Blog Home</a></li>
+                            <li><a class="dropdown-item" href="#">Blog Post</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn-view">View full version</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <p class="text-uppercase">Services</p>
+        <h1>What We Do</h1>
+        <p>The headline and subheader tells us what you're offering and the form header closes the deal.<br>
+            Over here you can explain why your offer is so great.</p>
+    </section>
+
+    <section class="logos">
+        <img src="https://via.placeholder.com/150x50?text=Atlassian" alt="Atlassian">
+        <img src="https://via.placeholder.com/150x50?text=Lacoste" alt="Lacoste">
+        <img src="https://via.placeholder.com/150x50?text=Juniper" alt="Juniper">
+        <img src="https://via.placeholder.com/150x50?text=HubSpot" alt="HubSpot">
+    </section>
+
+    <section class="services-section">
+        <img src="https://via.placeholder.com/400x300" alt="Services Image">
+        <div class="services-content">
+            <h2>Content Section</h2>
+            <p>Replace this default text with the copy for your website. We recommend using <a href="#">Semrush</a> to
+                find the best keywords for your website and landing pages.</p>
+            <p>When you're ready to write your website copy, use <a href="#">Jasper.ai</a>, an artificial intelligence
+                platform that helps marketing and sales teams create high-quality content faster.</p>
+            <ul class="services-list">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="new-section">
+        <div class="new-content">
+            <h2>Content Section</h2>
+            <p>Replace this default text with the copy for your website. We recommend using <a href="#">Semrush</a> to
+                find the best keywords for your website and landing pages.</p>
+            <p>When you're ready to write your website copy, use <a href="#">Jasper.ai</a>, an artificial intelligence
+                platform that helps marketing and sales teams create high-quality content faster.</p>
+            <a href="#">Learn more</a>
+        </div>
+        <img src="https://via.placeholder.com/400x300" alt="Content Section Image">
+    </section>
+
+    <section class="features-grid">
+        <div class="feature-item">
+            <img src="https://via.placeholder.com/50" alt="Feature Icon">
+            <h3>HubSpot CMS</h3>
+            <p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://via.placeholder.com/50" alt="Feature Icon">
+            <h3>HubSpot Integrations</h3>
+            <p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://via.placeholder.com/50" alt="Feature Icon">
+            <h3>SEO + PPC</h3>
+            <p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://via.placeholder.com/50" alt="Feature Icon">
+            <h3>Site Speed Optimization</h3>
+            <p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://via.placeholder.com/50" alt="Feature Icon">
+            <h3>Technical Consulting</h3>
+            <p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+        </div>
+        <div class="feature-item">
+            <img src="https://via.placeholder.com/50" alt="Feature Icon">
+            <h3>Team Training</h3>
+            <p>The headline and subheader tells us what you're offering, and the form header closes the deal.</p>
+        </div>
+    </section>
+
+    <section class="recent-projects">
+        <h2>Recent Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <img src="https://via.placeholder.com/400x300" alt="HubSpot Integration">
+                <h3>HubSpot Integration</h3>
+                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id
+                    imperdiet et, porttitor at sem.</p>
+                <a href="#">View project &rarr;</a>
+            </div>
+            <div class="project-item">
+                <img src="https://via.placeholder.com/400x300" alt="Custom Module Development">
+                <h3>Custom Module Development</h3>
+                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id
+                    imperdiet et, porttitor at sem.</p>
+                <a href="#">View project &rarr;</a>
+            </div>
+            <div class="project-item">
+                <img src="https://via.placeholder.com/400x300" alt="SEO & PPC">
+                <h3>SEO & PPC</h3>
+                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Curabitur arcu erat, accumsan id
+                    imperdiet et, porttitor at sem.</p>
+                <a href="#">View project &rarr;</a>
+            </div>
+        </div>
+        <div class="view-projects">
+            <a href="#">View all projects</a>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>+ How do we accept payments on our HubSpot website?</h3>
+        </div>
+        <div class="faq-item">
+            <h3>+ How do I optimize my website for conversions?</h3>
+        </div>
+        <div class="faq-item">
+            <h3>+ What template are included in this theme?</h3>
+        </div>
+    </section>
+
+    <section class="consultation-section">
+        <h2>Book a Free Consultation</h2>
+        <p>Interested in working together? We'd love to hear from you!</p>
+        <a href="#" class="btn-consultation">Contact Us</a>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="footer-title">Accelerator</div>
+            <p>Accelerator is free demo of the Generator website theme for HubSpot CMS.</p>
+            <p><a href="#">Click here</a> to view the full version of this theme.</p>
+            <p>Copyright © 2024, Drive Web Studio</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
