@@ -52,6 +52,8 @@ Include screenshots to showcase the UI and functionality. For example:
 
 ![Homepage Screenshot](link-to-screenshot)
 ![Responsive View](link-to-screenshot)
+![Screenshot (2)](https://github.com/user-attachments/assets/4ff3fa2c-a1cd-40f5-914d-a8cd9bede7cc)
+
 
 ---
 
