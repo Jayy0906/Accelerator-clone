@@ -52,7 +52,7 @@ Include screenshots to showcase the UI and functionality. For example:
 
 ![Homepage Screenshot][Screenshot (2)](https://github.com/user-attachments/assets/d8e2f894-e54a-480e-b21a-d577e93aeee5)
 
-![Responsive View](link-to-screenshot)
+![Responsive View]([link-to-screenshot](https://github.com/user-attachments/assets/d8e2f894-e54a-480e-b21a-d577e93aeee5))
 
 ---
 
