@@ -22,8 +22,7 @@ Live Deployment: [Accelerator Clone](https://transcendent-unicorn-b57077.netlify
 
 - HTML
 - CSS
-- JavaScript
-- Bootstrap (if used)
+- Bootstrap
 
 ---
 
@@ -51,7 +50,8 @@ To run this project locally:
 
 Include screenshots to showcase the UI and functionality. For example:
 
-![Homepage Screenshot](link-to-screenshot)
+![Homepage Screenshot](link-to-screenshot)![Screenshot (2)](https://github.com/user-attachments/assets/d8e2f894-e54a-480e-b21a-d577e93aeee5)
+
 ![Responsive View](link-to-screenshot)
 
 ---
